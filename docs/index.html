@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Estimate speech length, plan a word budget, and measure speaking pace from a timed rehearsal.">
+  <title>Speech Timing Toolkit</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./calculator.mjs"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Speech Timing Toolkit</h1>
+      <p>Plan your draft around the time available and check it in rehearsal.</p>
+    </header>
+    <section aria-labelledby="budget-title">
+      <h2 id="budget-title">Word budget</h2>
+      <p>Subtract time for activities that share the slot, such as questions or a silent demonstration.</p>
+      <form id="budget">
+        <label>Slot length (seconds) <input name="slot" type="number" min="0" step="any" value="300" required></label>
+        <label>Reserved time (seconds) <input name="reserved" type="number" min="0" step="any" value="80" required></label>
+        <label>Speaking pace (WPM) <input name="pace" type="number" min="0.01" step="any" value="130" required></label>
+        <button>Calculate word budget</button>
+        <output aria-live="polite"></output>
+      </form>
+    </section>
+    <section aria-labelledby="length-title">
+      <h2 id="length-title">Delivery time</h2>
+      <form id="delivery">
+        <label>Draft words <input name="words" type="number" min="0" max="9007199254740991" step="1" value="650" required></label>
+        <label>Speaking pace (WPM) <input name="pace" type="number" min="0.01" step="any" value="130" required></label>
+        <label>Reserved time (seconds) <input name="reserved" type="number" min="0" step="any" value="0" required></label>
+        <button>Calculate delivery time</button>
+        <output aria-live="polite"></output>
+      </form>
+    </section>
+    <section aria-labelledby="pace-title">
+      <h2 id="pace-title">Pace from rehearsal</h2>
+      <p>Time your excerpt with your usual breathing and punctuation pauses.</p>
+      <form id="pace">
+        <label>Words spoken <input name="words" type="number" min="1" max="9007199254740991" step="1" value="130" required></label>
+        <label>Elapsed time (seconds) <input name="elapsed" type="number" min="0.01" step="any" value="60" required></label>
+        <button>Calculate pace</button>
+        <output aria-live="polite"></output>
+      </form>
+    </section>
+    <footer><a href="https://github.com/wanyongtao1988/speech-timing-toolkit">Source, CSVs, and rehearsal worksheet</a></footer>
+    <noscript><p>Enable JavaScript to use the calculator.</p></noscript>
+  </main>
+</body>
+</html>

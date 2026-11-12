@@ -1,0 +1,22 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #172c2a;
+  background: #edf4f0;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 49rem; margin: auto; padding: 2.5rem 1rem; }
+header { margin-bottom: 1.75rem; }
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.06; margin: 0; }
+h2 { margin: 0 0 .5rem; font-size: 1.35rem; }
+p { margin: .6rem 0 1rem; line-height: 1.55; }
+section { background: #fff; border: 1px solid #c5d7cd; border-radius: .65rem; padding: 1.25rem; margin-bottom: 1rem; }
+form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: .8rem; align-items: end; }
+label { display: grid; gap: .4rem; font-weight: 600; }
+input, button { font: inherit; min-height: 2.75rem; border-radius: .35rem; }
+input { width: 100%; border: 1px solid #738a81; padding: .55rem; }
+button { grid-column: 1 / -1; justify-self: start; cursor: pointer; color: #fff; background: #165b4b; border: 0; padding: .55rem .9rem; }
+output { grid-column: 1 / -1; min-height: 1.4rem; font-weight: 700; }
+a { color: #155848; }
